@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import useMountEffect from '../useMountEffect';
+import useMountEffect from '../hooks/useMountEffect';
 
 describe('useMountEffect hook', () => {
   it('should call the call the func provided for mount only once', () => {
