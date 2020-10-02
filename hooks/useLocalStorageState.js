@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function useLocalStorageState(key, defaultVa1ue) {
+export default function useLocalStorageState(key, defaultVa1ue) {
     const [state, setState] = useState(() => {
         let value;
         try {
@@ -17,11 +17,11 @@ function useLocalStorageState(key, defaultVa1ue) {
         }, [state]);
     return [state, setState];
 }
-export default function Counter() {
-    const [count, setcount] = useLocalStorageState("my-app-count", 0)
-    return (
-        <div>
-            <button onClick={() => setcount(count + 1)} >{count}</button>
-        </div>
-    )
-}
+// export default function Counter() {
+//     const [count, setcount] = useLocalStorageState("my-app-count", 0)
+//     return (
+//         <div>
+//             <button onClick={() => setcount(count + 1)} >{count}</button>
+//         </div>
+//     )
+// }
