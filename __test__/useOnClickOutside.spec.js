@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import useOnClickOutside from '../useOnClickOutside';
+import useOnClickOutside from '../hooks/useOnClickOutside';
 
 const element = document.createElement('div');
 element.innerHTML = `<div id="parent">

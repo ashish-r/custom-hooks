@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import useMountEffect from '../useMountEffect';
+import useMountEffect from './useMountEffect';
 
 export default function useOnClickOutside(elRef, callback) {
   const paramRef = useRef();

@@ -1,4 +1,4 @@
-import useMountEffect from './useMountEffect'
-import useOnClickOutside from './useOnClickOutside'
+import useMountEffect from './hooks/useMountEffect';
+import useOnClickOutside from './hooks/useOnClickOutside';
 
-export {useMountEffect, useOnClickOutside}
+export { useMountEffect, useOnClickOutside };
