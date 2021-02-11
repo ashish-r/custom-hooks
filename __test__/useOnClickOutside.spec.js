@@ -44,4 +44,25 @@ describe('useOnClickOutside hook', () => {
     expect(callbackFuncA).not.toHaveBeenCalled();
     expect(callbackFuncB).toHaveBeenCalled();
   });
+  it('should not call the callback passed after unmount', () => {
+    const callbackFunc = jest.fn();
+    const ref = { current: document.getElementById('sibling-a') };
+    const { unmount } = renderHook(({ callback }) => useOnClickOutside(ref, callback), {
+      initialProps: { callback: callbackFunc },
+    });
+    unmount();
+    triggerClick('sibling-b');
+    expect(callbackFunc).not.toHaveBeenCalled();
+  });
+  it('should not call the callback passed after rerender and then unmount', () => {
+    const callbackFunc = jest.fn();
+    const ref = { current: document.getElementById('sibling-a') };
+    const { unmount, rerender } = renderHook(({ callback }) => useOnClickOutside(ref, callback), {
+      initialProps: { callback: callbackFunc },
+    });
+    rerender();
+    unmount();
+    triggerClick('sibling-b');
+    expect(callbackFunc).not.toHaveBeenCalled();
+  });
 });
