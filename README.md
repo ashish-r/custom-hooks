@@ -3,3 +3,11 @@
 
 # custom-hooks
 A collection of some cool custom hooks 
+
+### `useArrayRef` - [View code](https://github.com/ashish-r/custom-hooks/blob/master/hooks/useArrayRef.js)
+
+### `useMountEffect` - [View code](https://github.com/ashish-r/custom-hooks/blob/master/hooks/useMountEffect.js)
+
+### `useOnClickOutside` - [View code](https://github.com/ashish-r/custom-hooks/blob/master/hooks/useOnClickOutside.js)
+
+### `usePrevious.js` - [View code](https://github.com/ashish-r/custom-hooks/blob/master/hooks/usePrevious.js)
